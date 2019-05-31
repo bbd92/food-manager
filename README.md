@@ -18,8 +18,8 @@
 |name|string|null: false|○|
 |category_id|integer|null: false, foreign_key: true|-|
 |quantity|integer|null: false|-|
-|expiration_date|string|null: false, default: provisional_expiration_date|
-|user_id|integer|null: false, foreign_key: true|
+|expiration_date|string|null: false, default: provisional_expiration_date|-|
+|user_id|integer|null: false, foreign_key: true|-|
 
 ### association
 - belongs_to: user
@@ -29,7 +29,7 @@
 |Column|Type|Options|index|
 |------|----|-------|-----|
 |name|string|null: false|-|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|-|
 
 ### association
 - belongs_to: user
