@@ -1,0 +1,21 @@
+=link_to "index", root_path
+%h2 食品登録
+= form_for(@food) do |f|
+  .field
+    = f.label :食品名
+    %br/
+    = f.text_field :name, autofocus: true
+  .field
+    = f.label :期限
+    %br/
+    = f.text_field :expiration_date, autofocus: true
+  .field
+    = f.label :種類
+    %br/
+    = f.text_field :category_id, autofocus: true
+  .field
+    = f.label :量
+    %br/
+    = f.text_field :quantity, autofocus: true
+  .actions
+    = f.submit "登録"

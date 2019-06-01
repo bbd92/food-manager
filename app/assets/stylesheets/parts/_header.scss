@@ -1,16 +1,16 @@
 .header{
   height: $header-height;
+  border-radius: $radius $radius 0 0;
   background-color: $body-color;
   &__upper{
-    height: 200px;
+    height: calc($header-height - 50px);
     padding: 0 20px;
     &__logo{
-      float: left;
-      padding: 80px 250px;
+      
     }
     &__btns{
-      float: right;
-      z-index: 10;
+      
+      
       &__user{
       }
       &__add-foods{

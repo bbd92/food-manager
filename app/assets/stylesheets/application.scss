@@ -2,10 +2,5 @@
 @import 'arguments/size';
 @import 'reset';
 @import 'parts/header';
-
-.wrapper{
-  height: 100%;
-  width: $body-width;
-  margin: 0 auto;
-  background-color: $body-color;
-}
+@import 'parts/basement';
+@import 'parts/contents';

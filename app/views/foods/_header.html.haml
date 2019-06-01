@@ -2,8 +2,11 @@
   .header__upper
     .header__upper__logo logo
     .header__upper__btns
-      .header__upper__btns__user ▽user
-      .header__upper__btns__add-foods +
+      .header__upper__btns__user
+        =link_to "ログアウト", destroy_user_session_path, method: :delete
+      .header__upper__btns__add-foods
+        =link_to "+", new_food_path
   .header__lower
-    .header__lower__categories category
+    .header__lower__categories
+      =link_to "category", new_category_path
     //jsでcategoriesを追加していく

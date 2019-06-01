@@ -1,6 +1,11 @@
 .foods
-  .foods__food 
-    .foods__food__name name
-    .foods__food__expiration 2019/06/01
-    .foods__food__quantity x個
-    .foods__food__minus-sign ー
+  - @foods.each do |food|
+    .foods__food 
+      .foods__food__name
+        = food.name
+      .foods__food__expiration_date
+        = food.expiration_date
+      .foods__food__quantity
+        = food.quantity
+      .foods__food__minus-sign
+        = "ー"
