@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190531035012) do
+ActiveRecord::Schema.define(version: 20190605071809) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",       null: false
@@ -21,13 +21,13 @@ ActiveRecord::Schema.define(version: 20190531035012) do
   end
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                          null: false
-    t.integer  "category_id",                   null: false
-    t.integer  "quantity",                      null: false
-    t.string   "expiration_date", default: "3", null: false
-    t.integer  "user_id",                       null: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.string   "name",            null: false
+    t.integer  "category_id",     null: false
+    t.integer  "quantity",        null: false
+    t.date     "expiration_date", null: false
+    t.integer  "user_id",         null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["category_id"], name: "index_foods_on_category_id", using: :btree
     t.index ["name"], name: "index_foods_on_name", using: :btree
     t.index ["user_id"], name: "index_foods_on_user_id", using: :btree

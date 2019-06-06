@@ -1,0 +1,25 @@
+.wrapper{
+  height: 600px;
+  width: 600px;
+  position: relative;
+  background-color: $back-color;
+  border-radius: $radius;
+  border: solid 5px $body-color;
+  color: $body-color;
+  a:link{
+    color: $body-color;
+    text-decoration: none;
+  }
+  a:visited{
+    color: $body-color;
+    text-decoration: none;
+  }
+  a:active{
+    color: $body-color;
+    text-decoration: none;
+  }
+  a:hover{
+    color: $body-color;
+    text-decoration: none;
+  }
+}
