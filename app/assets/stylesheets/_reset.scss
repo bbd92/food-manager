@@ -9,6 +9,17 @@ html, body{
   align-items: center;
 }
 
-li{
+li, ul{
+  margin: 0;
+  padding: 0;
   list-style: none;
+  white-space:nowrap;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }

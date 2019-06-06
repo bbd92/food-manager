@@ -1,21 +1,26 @@
-=link_to "index", root_path
-%h2 食品登録
-= form_for(@food) do |f|
-  .field
-    = f.label :食品名
-    %br/
-    = f.text_field :name, autofocus: true
-  .field
-    = f.label :期限
-    %br/
-    = f.text_field :expiration_date, autofocus: true
-  .field
-    = f.label :種類
-    %br/
-    = f.text_field :category_id, autofocus: true
-  .field
-    = f.label :量
-    %br/
-    = f.text_field :quantity, autofocus: true
-  .actions
-    = f.submit "登録"
+.wrapper
+  .back-to-index
+    =link_to "×", root_path
+  .header
+    .title
+      %h2 食品登録
+  
+  = form_for(@food) do |f|
+    .field
+      = f.label :食品名
+      %br/
+      = f.text_field :name, autofocus: true
+    .field
+      = f.label :期限
+      %br/
+      = f.date_select :expiration_date, autofocus: true, default: @default_expiration_date
+    .field
+      = f.label :種類
+      %br/
+      = f.collection_select :category_id, @categories, :id, :name, autofocus: true, prompt: true
+    .field
+      = f.label :量
+      %br/
+      = f.text_field :quantity, autofocus: true
+    .actions
+      = f.submit "登録", id: "submit-create"

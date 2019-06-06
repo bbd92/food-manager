@@ -1,27 +1,70 @@
 .header{
   height: $header-height;
   border-radius: $radius $radius 0 0;
-  background-color: $body-color;
   &__upper{
-    height: calc($header-height - 50px);
-    padding: 0 20px;
+    height: 80px;
+    padding: 0 40px;
+    position: relative;
+    @include clearfix;
     &__logo{
-      
+      line-height: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
+      float: left;
+      color: $body-color;
+      font-size: 30px;
     }
     &__btns{
-      
-      
+      line-height: 20px;
+      float: right;
+      padding: 20px 0;
       &__user{
-      }
-      &__add-foods{
       }
     }
   }
   &__lower{
-    border: $border-status;
-    &__categories{
-      height: 50px;
-
+    height: 30px;
+    padding: 10px 40px;
+    @include clearfix;
+    &__category-list{
+      max-width: 490px;
+      height: 30px;
+      overflow-x: scroll;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      float: left;
+      .category{
+        a:link{
+          color: $back-color;
+          text-decoration: none;
+        }
+        a:visited{
+          color: $back-color;
+          text-decoration: none;
+        }
+        a:active{
+          color: $back-color;
+          text-decoration: none;
+        }
+        a:hover{
+          color: $back-color;
+          text-decoration: none;
+        }
+        border-radius: $radius;
+        border: solid 3px $body-color;
+        background-color: $body-color;
+        color: $back-color;
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+    &__add-categories{
+      height: 30px;
+      padding-left: 15px;
+      float: left;
     }
   }
 }

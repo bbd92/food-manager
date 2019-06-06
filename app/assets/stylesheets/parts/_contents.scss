@@ -1,0 +1,38 @@
+.foods{
+  height: 355px;
+  overflow: scroll;
+  padding: 10px 40px;
+  &__food{
+    height: 30px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-radius: $radius;
+    border: solid 2px $body-color;
+    position: relative;
+    @include clearfix;
+    &__name{
+      line-height: 30px;
+      position: absolute;
+      left: 20px;
+      float: left;
+    }
+    &__expiration-date{
+      line-height: 30px;
+      position: absolute;
+      left: 300px;
+      float: left;
+    }
+    &__quantity{
+      line-height: 30px;
+      position: absolute;
+      left: 450px;
+      float: left;
+    }
+    &__minus-sign{
+      line-height: 30px;
+      position: absolute;
+      left: 480px;
+      float: left;
+    }
+  }
+}
