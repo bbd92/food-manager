@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 20190531038718) do
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                            null: false
     t.string   "category",        default: "その他", null: false
     t.integer  "quantity",                        null: false
     t.date     "expiration_date",                 null: false
