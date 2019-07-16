@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DB設計
 
-Things you may want to cover:
+## users table
+|Column|Type|Options|index|
+|------|----|-------|-----|
+|name|string|null: false|○|
+|provisional_expiration_date|integer|null: false, default: 3|-|
 
-* Ruby version
+### association
+- has_many: foods
+- has_many: categories
 
-* System dependencies
+## foods table
+|Column|Type|Options|index|
+|------|----|-------|-----|
+|name|string|null: false|○|
+|category_id|integer|null: false, foreign_key: true|-|
+|quantity|integer|null: false|-|
+|expiration_date|string|null: false, default: provisional_expiration_date|-|
+|user_id|integer|null: false, foreign_key: true|-|
 
-* Configuration
+### association
+- belongs_to: user
+- belongs_to: food
 
-* Database creation
+## categories table
+|Column|Type|Options|index|
+|------|----|-------|-----|
+|name|string|null: false|-|
+|user_id|integer|null: false, foreign_key: true|-|
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### association
+- belongs_to: user
+- has_many: foods
