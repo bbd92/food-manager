@@ -57,6 +57,6 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'active_hash'
 
-# group :production do
-#   gem 'pg'
-# end
+group :production do
+  gem 'pg'
+end
