@@ -1,0 +1,23 @@
+.basement__right__border{
+  #new_food{
+  height: calc(100% - 40px);
+  margin: 40px;
+  }
+  &__text_area{
+    height: 80%;
+    width: 100%;
+  }
+  button{
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+    background-image: url('upload.png');
+    background-size: cover;
+    border: none;
+  }
+  &__contents{
+    &__users_form{
+      margin: 100px 0;
+    }
+  }
+}

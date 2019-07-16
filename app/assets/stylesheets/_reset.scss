@@ -3,10 +3,11 @@ html, body{
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: $back-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+h1{
+  margin: 0;
+  padding: 0;
 }
 
 li, ul{

@@ -1,0 +1,141 @@
+.basement__right__border__box{
+  height:  33%;
+  width: 100%;
+  display: flex;
+  &__left{
+    display: block;
+    height: 100%;
+    width: 50%;
+    border-bottom: 5px solid $icon-color;
+    border-right: 5px solid $icon-color;
+    position: relative;
+    &__image{
+      height: 40%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  &__right{
+    display: block;
+    height: 100%;
+    width: 50%;
+    border-bottom: 5px solid $icon-color;
+    position: relative;
+    &__image{
+      height: 40%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  &__plus{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    &__image{
+      height: 60%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
+.basement__left__border__category_box{
+  height: 33%;
+  width: 100%;
+  &__vegitable{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-bottom: 5px solid $font-color;
+    &__image{
+      height: 60%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  &__meat_and_fish{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-bottom: 5px solid $font-color;
+    &__image{
+      height: 60%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  &__else{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    &__image{
+      height: 60%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
+
+  // &__food{
+  //   height: 30px;
+  //   padding: 10px 0;
+  //   margin-bottom: 10px;
+  //   position: relative;
+  //   &__name{
+  //     line-height: 30px;
+  //     position: absolute;
+  //     left: 20px;
+  //     float: left;
+  //   }
+  //   &__expiration-date{
+  //     line-height: 30px;
+  //     position: absolute;
+  //     left: 300px;
+  //     float: left;
+  //   }
+  //   &__quantity{
+  //     line-height: 30px;
+  //     position: absolute;
+  //     left: 450px;
+  //     float: left;
+  //   }
+  //   &__minus{
+  //     line-height: 30px;
+  //     position: absolute;
+  //     left: 480px;
+  //     float: left;
+  //   }
+  //   &__destroy{
+  //     line-height: 30px;
+  //     position: absolute;
+  //     left: 480px;
+  //     float: left;
+  //   }
+  // }

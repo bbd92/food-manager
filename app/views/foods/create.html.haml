@@ -1,0 +1,31 @@
+.basement
+  .basement__left
+    .basement__left__border
+      .basement__left__border__wrapper
+        .basement__left__border__wrapper__icons
+          = image_tag 'plus-white', class: "basement__left__border__wrapper__icons__category_image"
+          =link_to root_path, class: "basement__left__border__wrapper__icons__back" do
+            = image_tag 'back-white.png', class: "basement__left__border__wrapper__icons__back__icon"
+  .basement__right
+    .basement__right__border
+      .basement__right__border__contents
+        %h3 以下の食品が登録されました
+        .basement__right__border__contents__content
+          .basement__right__border__contents__content__name
+            = "食品名"
+          .basement__right__border__contents__content__expiration_date
+            = "消費期限"
+          .basement__right__border__contents__content__quantity
+            = "数量"
+          .basement__right__border__contents__content__category
+            = "種類"
+        - @created_foods.each do |food|
+          .basement__right__border__contents__content
+            .basement__right__border__contents__content__name
+              = food.name
+            .basement__right__border__contents__content__expiration_date
+              = food.expiration_date
+            .basement__right__border__contents__content__quantity
+              = food.quantity
+            .basement__right__border__contents__content__category
+              = food.category

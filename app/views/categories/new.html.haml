@@ -1,8 +1,0 @@
-=link_to "index", root_path
-%h2 カテゴリー登録
-= form_for(@category) do |f|
-  .field
-    = f.label :カテゴリー名
-    %br/
-    = f.text_field :name, autofocus: true
-    = f.submit "登録"

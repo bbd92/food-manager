@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: food-manager_production
-  username: food-manager
-  password: <%= ENV['FOOD-MANAGER_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

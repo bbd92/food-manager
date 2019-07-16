@@ -1,17 +1,27 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.basement
+  .basement__left
+    .basement__left__border
+      .basement__left__border__wrapper
+        .basement__left__border__wrapper__icons
+          = image_tag 'logo.png',class: "logo"
+  .basement__right
+    .basement__right__border
+      .basement__right__border__contents
+        .basement__right__border__contents__users_form
+          %h2 Log in
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .field
+              = f.label :email
+              %br/
+              = f.email_field :email, autofocus: true, autocomplete: "email"
+            .field
+              = f.label :password
+              %br/
+              = f.password_field :password, autocomplete: "current-password"
+            - if devise_mapping.rememberable?
+              .field
+                = f.check_box :remember_me
+                = f.label :remember_me
+            .actions
+              = f.submit "Log in"
+          = render "devise/shared/links"

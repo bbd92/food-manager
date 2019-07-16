@@ -1,19 +1,31 @@
-%h2 Change your password
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  = f.hidden_field :reset_password_token
-  .field
-    = f.label :password, "New password"
-    %br/
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-      %br/
-    = f.password_field :password, autofocus: true, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation, "Confirm new password"
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Change my password"
-= render "devise/shared/links"
+.basement
+  .basement__left
+    .basement__left__border
+      .basement__left__border__wrapper
+        .basement__left__border__wrapper__icons
+          = image_tag 'edit-white.png', class: "basement__left__border__wrapper__icons__category_image"
+          =link_to root_path, class: "basement__left__border__wrapper__icons__back" do
+            = image_tag 'back-white.png', class: "basement__left__border__wrapper__icons__back__icon"
+  .basement__right
+    .basement__right__border
+      .basement__right__border__contents
+        .basement__right__border__contents__users_form
+          %h2 Change your password
+          = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+            = render "devise/shared/error_messages", resource: resource
+            = f.hidden_field :reset_password_token
+            .field
+              = f.label :password, "New password"
+              %br/
+              - if @minimum_password_length
+                %em
+                  (#{@minimum_password_length} characters minimum)
+                %br/
+              = f.password_field :password, autofocus: true, autocomplete: "new-password"
+            .field
+              = f.label :password_confirmation, "Confirm new password"
+              %br/
+              = f.password_field :password_confirmation, autocomplete: "off"
+            .actions
+              = f.submit "Change my password"
+          = render "devise/shared/links"

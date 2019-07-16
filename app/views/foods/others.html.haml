@@ -1,0 +1,24 @@
+.basement
+  .basement__left
+    .basement__left__border
+      .basement__left__border__wrapper
+        .basement__left__border__wrapper__icons
+          = image_tag 'milk-white.png', class: "basement__left__border__wrapper__icons__category_image"
+          =link_to root_path, class: "basement__left__border__wrapper__icons__back" do
+            = image_tag 'back-white.png', class: "basement__left__border__wrapper__icons__back__icon"
+  .basement__right
+    .basement__right__border
+      .basement__right__border__contents
+        - @others.each do |other|
+          .basement__right__border__contents__content{data: {id: other.id}}
+            .basement__right__border__contents__content__name
+              = other.name
+            .basement__right__border__contents__content__expiration_date
+              = other.expiration_date
+            .basement__right__border__contents__content__quantity
+              = other.quantity
+            = link_to food_path(other.id), method: :delete, class: "basement__right__border__contents__content__reduce" do
+              - if other.quantity > 1
+                = "-"
+              - else
+                = "×"

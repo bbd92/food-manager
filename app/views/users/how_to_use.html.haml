@@ -1,0 +1,30 @@
+.basement
+  .basement__left
+    .basement__left__border
+      .basement__left__border__wrapper
+        .basement__left__border__wrapper__icons
+          = image_tag 'info-white', class: "basement__left__border__wrapper__icons__category_image"
+          =link_to root_path, class: "basement__left__border__wrapper__icons__back" do
+            = image_tag 'back-white.png', class: "basement__left__border__wrapper__icons__back__icon"
+  .basement__right
+    .basement__right__border
+      .basement__right__border__contents
+        %h2 How To Use
+        %li
+          %h3 アプリ概要
+          %p 音声入力によるハンズフリー化を目指した食品管理アプリです。
+        %li
+          %h3 トップページ案内
+          %p <img src="/assets/vegitable.png">：野菜・果物の在庫を確認できます<br><img src="/assets/meat.png">：肉・魚の在庫を確認できます<br><img src="/assets/milk.png">：そのほかの食品の在庫を確認できます<br><img src="/assets/plus.png">：食品を追加できます<br><img src="/assets/mail.png">：アプリからの通知を見ることができます<br><img src="/assets/info.png">：アプリの使い方を確認できます（このページ）<br><img src="/assets/edit.png">：ユーザー情報を変更できます<br><img src="/assets/signout.png">：サインアウトできます<br>
+        %li
+          %h3 各ページ共通事項案内
+          %p <img src="/assets/back.png">：トップページへ戻れます
+        %li
+          %h3 食品を購入した際は
+          %p <img src="/assets/plus.png">：入力画面へ移動し、入力欄にご利用のデバイスの音声入力機能、もしくはキーボード入力で入力してください。必ず「食品名○月○日数量」の形式で入力してください。複数種類登録する場合は、食品ごとに改行して入力してください。数量は、ユーザーさまが管理したい単位でのご入力がおすすめです。
+          %h4 入力例
+          %p トマトトマト7月22日5<br>きゅうり7月20日3<br>豚肉7月19日1<br>牛乳7月23日10
+          %p 全ての食品の入力が完了したら、<img src="/assets/upload.png">を押してください。自動で各カテゴリーに分類され、登録されます。<br>※食品名は16文字まで、個数は999まで登録可能です。
+        %li
+          %h3 食品を消費した際は
+          %p <img src="/assets/vegitable.png"><img src="/assets/meat.png"><img src="/assets/milk.png">：使用した食品の該当カテゴリーの一覧へ移動し、該当食品の - を使った分だけ押してください。<br>※設定した消費期限を過ぎた食品は、自動で削除されます。

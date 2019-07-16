@@ -1,4 +1,28 @@
-.wrapper
-  = render 'header'
-  = render 'contents'
-  = render 'footer'
+.basement
+  .basement__left
+    .basement__left__border
+      .basement__left__border__category_box
+        = link_to vegitables_foods_path, class: "basement__left__border__category_box__vegitable" do
+          = image_tag 'vegitable-white.png', class: "basement__left__border__category_box__vegitable__image"
+      .basement__left__border__category_box
+        = link_to meats_and_fishes_foods_path, class: "basement__left__border__category_box__meat_and_fish" do
+          = image_tag 'meat-white.png', class: "basement__left__border__category_box__meat_and_fish__image"
+      .basement__left__border__category_box
+        = link_to others_foods_path, class: "basement__left__border__category_box__else" do
+          = image_tag 'milk-white.png', class: "basement__left__border__category_box__else__image"
+
+  .basement__right
+    .basement__right__border
+      .basement__right__border__box
+        = link_to edit_user_registration_path, class: "basement__right__border__box__left" do
+          = image_tag 'edit.png', class: "basement__right__border__box__left__image"
+        = link_to destroy_user_session_path, method: :delete, class: "basement__right__border__box__right" do
+          = image_tag 'signout.png', class: "basement__right__border__box__right__image"
+      .basement__right__border__box
+        = link_to how_to_use_users_path, class: "basement__right__border__box__left" do
+          = image_tag 'info.png', class: "basement__right__border__box__left__image"
+        = link_to notice_users_path, class: "basement__right__border__box__right" do
+          = image_tag 'mail.png', class: "basement__right__border__box__right__image"
+      .basement__right__border__box
+        = link_to new_food_path, class: "basement__right__border__box__plus" do
+          = image_tag 'plus.png', class: "basement__right__border__box__plus__image"

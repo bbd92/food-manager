@@ -1,26 +1,13 @@
-.wrapper
-  .back-to-index
-    =link_to "×", root_path
-  .header
-    .title
-      %h2 食品登録
-  
-  = form_for(@food) do |f|
-    .field
-      = f.label :食品名
-      %br/
-      = f.text_field :name, autofocus: true
-    .field
-      = f.label :期限
-      %br/
-      = f.date_select :expiration_date, autofocus: true, default: @default_expiration_date
-    .field
-      = f.label :種類
-      %br/
-      = f.collection_select :category_id, @categories, :id, :name, autofocus: true, prompt: true
-    .field
-      = f.label :量
-      %br/
-      = f.text_field :quantity, autofocus: true
-    .actions
-      = f.submit "登録", id: "submit-create"
+.basement
+  .basement__left
+    .basement__left__border
+      .basement__left__border__wrapper
+        .basement__left__border__wrapper__icons
+          = image_tag 'plus-white', class: "basement__left__border__wrapper__icons__category_image"
+          =link_to root_path, class: "basement__left__border__wrapper__icons__back" do
+            = image_tag 'back-white.png', class: "basement__left__border__wrapper__icons__back__icon"
+  .basement__right
+    .basement__right__border
+      = form_for (@food) do |f|
+        = f.text_area :name, placeholder: "例：\nトマト7月22日5\nきゅうり7月20日3\n豚肉7月19日1\n牛乳7月23日10", class: "basement__right__border__text_area"
+        = button_tag ""
