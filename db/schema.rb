@@ -10,25 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190715220855) do
-
-  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",       null: false
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_categories_on_user_id", using: :btree
-  end
+ActiveRecord::Schema.define(version: 20190531038718) do
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                              null: false
-    t.integer  "quantity",                          null: false
-    t.date     "expiration_date",                   null: false
-    t.integer  "user_id",                           null: false
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.string   "category",        default: "other", null: false
-    t.index ["name"], name: "index_foods_on_name", using: :btree
+    t.string   "category",        default: "その他", null: false
+    t.integer  "quantity",                        null: false
+    t.date     "expiration_date",                 null: false
+    t.integer  "user_id",                         null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.index ["user_id"], name: "index_foods_on_user_id", using: :btree
   end
 
@@ -45,6 +35,5 @@ ActiveRecord::Schema.define(version: 20190715220855) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "categories", "users"
   add_foreign_key "foods", "users"
 end
